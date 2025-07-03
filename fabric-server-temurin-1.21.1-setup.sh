@@ -1,8 +1,8 @@
 #!/bin/bash
 ## Run as root
 
-if [$(id -u) -ne 0]; then
-    echo "Root permissions required"
+if [ $(whoami) = 'root' ]; then
+	echo "Root permissions required."
     exit
 fi
 
